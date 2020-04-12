@@ -109,7 +109,6 @@ import java.util.ArrayList;
 //            System.out.format("\n");
 //        }
 //    }
-
     public void changeProductName(int id, String newName) {
         boolean found = false;
         for (int i = 0; i < allProducts.size(); i++) {
