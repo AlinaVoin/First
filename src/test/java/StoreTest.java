@@ -33,13 +33,6 @@ class StoreTest {
 
         test.changePriceForProduct(456789, new Price(55, (short) 55));
         assert test.getPrice(456789).equals(new Price(55, (short) 55));
-
-
-
-
-
-
-
         try {
             test.changePriceForProduct(456851, new Price(61, (short) 23));
         } catch (IllegalArgumentException ex){
