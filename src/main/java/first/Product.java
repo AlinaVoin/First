@@ -1,33 +1,34 @@
 package first;
 
-import java.io.IOException;
-import java.math.BigDecimal;
+
 import java.util.Objects;
 
-class Product {
+public class Product {
     private String name;
-    private BigDecimal price;
+    private double price;
 
-    Product(String name, BigDecimal price) {
+    Product(String name, double price) {
         this.name = name;
         this.price = price;
     }
 
-    void changePrice(BigDecimal newPrice) throws IOException {
-        if (priceIsWrong(newPrice)) throw new IOException("Wrong price!");
+    public Product() {
+    }
+
+    public void changePrice(double newPrice) {
         this.price = newPrice;
     }
 
-    boolean priceIsWrong(BigDecimal price){
-        return (price.compareTo(BigDecimal.ZERO) < 0 || price.remainder(BigDecimal.valueOf(0.01d)).compareTo(BigDecimal.ZERO) != 0);
-    }
-
-    void changeName(String newName){
+    public void changeName(String newName){
         this.name = newName;
     }
 
-    BigDecimal getPrice() {
+    public double getPrice() {
         return price;
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -35,7 +36,7 @@ class Product {
         if (this == obj) return true;
         if (obj instanceof Product) {
             Product other = (Product) obj;
-            return name.equals(other.name) && price.equals(other.price);
+            return name.equals(other.name) && price == price;
         }
         return false;
     }
@@ -52,3 +53,4 @@ class Product {
     }
 
 }
+
