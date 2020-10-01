@@ -12,7 +12,7 @@ class PriceListTest {
     private Product bonk = new Product("Bonk", 69.69);
     private Product sandwich = new Product("Sandwich", 228.42);
     private Product productNegativePrice = new Product("EvilMilk", -34.99);
-    private Product productInvalidPenny = new Product("EvilMilk", -34.995);
+    private Product productInvalidPenny = new Product("EvilMilk", 34.995);
 
     @BeforeEach
     public void setUp() {
@@ -85,7 +85,7 @@ class PriceListTest {
     @Test
     void invalidCode(){
         Product product = priceList.getProduct(0);
-        assertEquals(product, null);
+        assertEquals(null, product);
     }
 
 

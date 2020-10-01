@@ -12,9 +12,6 @@ public class Product {
         this.price = price;
     }
 
-    public Product() {
-    }
-
     public void changePrice(double newPrice) {
         this.price = newPrice;
     }
