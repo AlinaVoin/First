@@ -43,11 +43,4 @@ public class Product {
         return ("name: " + this.name +
                 "   price: " + this.price);
     }
-
-    @Override
-    public int hashCode() {
-        return (Objects.hash(name, price));
-    }
-
 }
-

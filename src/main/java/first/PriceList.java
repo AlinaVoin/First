@@ -69,7 +69,4 @@ public class PriceList {
                 append("item: ").append(product).append("\n"));
         return result.toString();
     }
-
-
 }
-
